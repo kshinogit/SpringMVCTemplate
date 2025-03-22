@@ -19,8 +19,6 @@ public class WebConfig implements WebMvcConfigurer {
     public ClassLoaderTemplateResolver templateResolver() {
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setPrefix("/templates/"); // テンプレートの場所
-//        templateResolver.setPrefix("/WEB-INF/templates/"); // テンプレートの場所
-//        templateResolver.setPrefix("/WEB-INF/views/"); // テンプレートの場所
         templateResolver.setSuffix(".html");      // テンプレートの拡張子
         templateResolver.setTemplateMode("HTML");
         templateResolver.setCharacterEncoding("UTF-8");
