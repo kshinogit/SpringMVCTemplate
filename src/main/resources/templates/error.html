@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error</title>
+</head>
+<body>
+<h1>エラーコード: <span th:text="${errorCode}"></span></h1>
+<p>メッセージ: <span th:text="${errorMessage}"></span></p>
+<p><a th:href="@{/}">ホームに戻る</a></p>
+</body>
+</html>
