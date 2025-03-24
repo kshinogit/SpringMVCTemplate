@@ -27,11 +27,21 @@ dependencies {
     // Servlet API（Tomcat利用時）
     providedCompile 'jakarta.servlet:jakarta.servlet-api:6.1.0'
 
-    // JSTL（オプション）
-    implementation 'javax.servlet:jstl:1.2'
+    // JSTL（オプション） ※JSPは利用しない為、不要
+//    implementation 'javax.servlet:jstl:1.2'
 
-    // Servlet API（providedスコープで追加） ※エラーになる。
-//    providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+    // Lombokライブラリ（@Slf4jを提供）
+    implementation 'org.projectlombok:lombok:1.18.30'
+
+    // Lombokのアノテーション処理を有効にするための設定（コンパイル時）
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    // SLF4J API（ロギングの統一インターフェース）
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+
+    // Logback（SLF4J用の具体的なロギング実装）
+    implementation 'ch.qos.logback:logback-classic:1.5.18'
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

@@ -1,0 +1,32 @@
+<configuration>
+    <!-- コンソール出力（オプション） -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ファイル出力設定 -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- 出力ファイルパス -->
+<!--        <file>logs/app.log</file>-->
+        <file>C:\Users\Owner\IdeaProjects\SpringMVCTemplate\logs/app.log</file>
+        <!-- ローテーションポリシー：日付ベース -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- ローテーション時のファイル名パターン -->
+            <fileNamePattern>logs/app-%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <!-- 最大保持日数（例: 7日分のログを保持） -->
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ルートロガー -->
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
