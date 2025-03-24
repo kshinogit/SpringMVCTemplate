@@ -5,5 +5,7 @@
 </head>
 <body>
 <h1 th:text="${message}">メッセージがここに表示されます</h1>
+<p th:text="'application.propertiesの値（app.name）' + ${appName}"></p>
+<p th:text="'application.propertiesの値（app.version）' + ${appVersion}"></p>
 </body>
 </html>
