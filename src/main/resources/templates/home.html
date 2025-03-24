@@ -1,40 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spring MVC Templateシステム</title>
-    <link th:href="@{/css/myAppStyle.css}" rel="stylesheet">
-    <script th:src="@{/js/myAppScript.js}" defer></script>
-</head>
+<head th:replace="~{layout :: head}"></head>
 <body>
-<header>
-    <div class="logo" ><a href="#"><img th:src="@{/images/logo.png}" alt="マイシステム"></a></div>
-    <div class="systemName"><p>MY SYSTEM</p></div>
-    <nav>
-        <a href="#" class="content-link">テスト画面</a>
-        <a href="#" class="content-link">アカウント</a>
-        <a href="#" class="content-link">ログアウト</a>
-    </nav>
-    <!-- モバイル用トグルボタン -->
-    <button class="menu-toggle" id="menuToggle">☰</button>
-</header>
-<!--コンテナ部-->
-<div class="container">
-    <!--  サイドメニュー部-->
-    <aside class="sidebar" id="sidebar">
-        <a href="#" class="content-link">メニュー1</a>
-        <a href="#" class="content-link">メニュー2</a>
-    </aside>
-    <main class="mainContents">
-        <h1 id="mainContentTitle">ホーム</h1>
-    </main>
+<header th:replace="~{layout :: header}"></header>
+<div th:replace="~{layout :: container}">
+    <div th:fragment="mainContents">
+        <h1>ホーム</h1>
+    </div>
 </div>
-<!--フッター部-->
-<footer>
-    <p>&copy; 2023 会社名. All rights reserved.</p>
-</footer>
-
-
 </body>
 </html>

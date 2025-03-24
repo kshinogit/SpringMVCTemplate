@@ -19,6 +19,7 @@ public class HomeController {
     public String home(Model model) {
         System.out.println("Current Working Directory: " + System.getProperty("user.dir"));
         log.info("[start] HomeController");
+        model.addAttribute("pageId", "home");
         return "home";
     }
 }
