@@ -118,14 +118,14 @@ public class WebConfig implements WebMvcConfigurer {
 - WebMvcConfigurer：カスタマイズ可能な設定を提供するインターフェース。
 
 ## TO DO
-- propertieファイル読み込み（環境毎）
-- log
-- 一般的な構成（controller、service、model）
-- DB接続
-- bootstrapを使用したcrud画面の作成
-- バリデーション処理
-- セキュリティ関連
-  - ログイン機能
-  - ダブルサブミット
-  - CSRF対策
+- [x] propertieファイル読み込み（環境毎）
+- [x] log
+- [ ] 一般的な構成（controller、service、model）
+- [ ] DB接続
+- [ ] bootstrapを使用したcrud画面の作成
+- [ ] バリデーション処理
+- [ ] セキュリティ関連
+  - [ ] ログイン機能
+  - [ ] ダブルサブミット
+  - [ ] CSRF対策
 
